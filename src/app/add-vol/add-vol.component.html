@@ -1,0 +1,50 @@
+<div class="container">
+    <div>
+        <h2>Ajouter un Vol :</h2>
+    </div>
+    <form>
+        <div class="col-sm-2 col-md-2 col-lg-2">
+            <label> ID Vol</label>
+            <input type="text" [(ngModel)]="newVol.idVol" name="idVol" class="form-control">
+        </div>
+
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <label> Nom Compagnie Aerienne </label>
+            <input type="text" [(ngModel)]="newVol.nomCompagnieAerienne" name="nomCompagnieAerienne" class="form-control">
+        </div>
+
+        <div class="col-sm-2 col-md-2 col-lg-2">
+            <label> Date Vol</label>
+            <input type="date" [(ngModel)]="newVol.DateVol" name="dateVol" class="form-control">
+        </div>
+
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <label> Numero de Vol</label>
+            <input type="text" [(ngModel)]="newVol.numeroVol" name="numVol" class="form-control">
+        </div>
+
+        <div class="col-sm-2 col-md-2 col-lg-2">
+            <label> Escale de depart</label>
+            <input type="text" [(ngModel)]="newVol.escaleDepart" name="escaleDepart" class="form-control">
+        </div>
+
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <label> Escale d'arrivee</label>
+            <input type="text" [(ngModel)]="newVol.escaleArrive" name="escaleArrive" class="form-control">
+        </div>
+
+        <div class="col-sm-2 col-md-2 col-lg-2">
+            <label> Etat Vol</label>
+            <input type="text" [(ngModel)]="newVol.etatVol" name="etatVol" class="form-control">
+        </div>
+
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <label> Depart programe</label>
+            <input type="text" [(ngModel)]="newVol.departProgramme" name="departProgramme" class="form-control">
+        </div>
+
+        <div class="mt-2">
+            <button type="submit" (click)="addVol()" class="btn btn-success">Ajouter</button>
+        </div>
+    </form>
+</div>

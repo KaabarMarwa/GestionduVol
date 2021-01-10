@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="card shadow mb-4">
+    <div class="card-body">
+    <table class="table table-striped">
+    <tr>
+    <th>Id</th><th>nom Compagnie Aerienne</th><th>Date Vol</th><th>numero Vol</th><th>escale depart</th><th>escale arrivé</th><th>état vol</th><th>depart programmé</th>
+    </tr>
+    <tbody *ngFor="let vol of vols">
+    
+    <tr>
+    <td>{{vol.idVol}}</td>
+    <td>{{vol.nomCompagnieAerienne}}</td>
+    <td>{{vol.DateVol | date: 'dd/MM/yyyy'}}</td>
+    <td>{{vol.numeroVol}}</td>
+    <td>{{vol.escaleDepart}}</td>
+    <td>{{vol.escaleArrive}}</td>
+    <td>{{vol.etatVol}}</td>
+    <td>{{vol.departProgramme}}</td>
+    <td><a class="btn btn-danger" (click)="supprimerVol(vol)">Supprimer</a></td>
+    <td><a class="btn btn-sucess" [routerLink]="['/updateVol',vol.idVol]">Modifier</a></td>
+    </tr>
+    </tbody>
+    
+    </table>
+    </div>
+    </div>
+    </div>
